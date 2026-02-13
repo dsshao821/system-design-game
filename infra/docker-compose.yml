@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  api:
+    image: python:3.11-slim
+    working_dir: /app
+    volumes:
+      - ../backend:/app
+    command: bash -lc "pip install -r requirements.txt && uvicorn app.main:app --host 0.0.0.0 --port 8000"
+    ports:
+      - "8000:8000"
+
+  sim-engine:
+    image: python:3.11-slim
+    working_dir: /app
+    volumes:
+      - ../sim-engine:/app
+    command: bash -lc "pip install -r requirements.txt && python -c 'from src.runner import run_simulation; print(run_simulation())'"

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Design Game</title>
+    <style>
+      body { font-family: Inter, Arial, sans-serif; margin: 0; background: #0b0d12; color: #e8ecf1; }
+      .wrap { max-width: 980px; margin: 0 auto; padding: 24px; }
+      .hero { padding: 56px 0 24px; }
+      h1 { font-size: 2.2rem; margin-bottom: 8px; color: #6fffb0; }
+      h2 { color: #6fffb0; margin-top: 32px; }
+      p { color: #b8c2cc; }
+      .card { background: #141923; border: 1px solid #283041; border-radius: 10px; padding: 16px; margin: 10px 0; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap: 12px; }
+      .pill { display: inline-block; background: #2b834f; color: #fff; padding: 4px 10px; border-radius: 999px; font-size: 12px; }
+      .cta { margin-top: 22px; display:inline-block; padding: 10px 14px; border-radius: 8px; background:#6fffb0; color:#04140c; text-decoration:none; font-weight:600; }
+      .small { font-size: 14px; color: #97a3af; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="hero">
+        <span class="pill">Beta concept</span>
+        <h1>Master System Design Through Interactive Challenges</h1>
+        <p>Stop memorizing. Start building. Learn system design by solving real-world problems in your browser.</p>
+        <a class="cta" href="#mvp">See MVP scope</a>
+      </section>
+
+      <section>
+        <h2>The Problem</h2>
+        <div class="grid">
+          <div class="card"><strong>Interviews are tough</strong><p>You freeze when asked to design large systems under pressure.</p></div>
+          <div class="card"><strong>Passive learning fails</strong><p>Books/videos don’t build architecture trade-off instincts.</p></div>
+          <div class="card"><strong>No time for full projects</strong><p>You need fast, focused, high-feedback practice loops.</p></div>
+        </div>
+      </section>
+
+      <section id="mvp">
+        <h2>MVP Experience</h2>
+        <div class="card">
+          <ol>
+            <li>Choose challenge: URL Shortener / Chat / Video</li>
+            <li>Analyze functional + non-functional requirements</li>
+            <li>Build architecture on a component canvas</li>
+            <li>Run load simulation and inspect metrics</li>
+            <li>Get score + bottleneck explanations and iterate</li>
+          </ol>
+        </div>
+      </section>
+
+      <section>
+        <h2>What’s in this repo folder</h2>
+        <div class="card">
+          <p class="small">Open <code>../README.md</code> and files in <code>../docs</code> for a full execution plan, architecture, and roadmap.</p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
