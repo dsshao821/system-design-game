@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "url-shortener",
+    "title": "URL Shortener",
+    "difficulty": "easy",
+    "requirements": [
+      "Handle short-link creation and redirects",
+      "Support high read traffic and low redirect latency",
+      "Persist links durably"
+    ],
+    "hints": [
+      "Cache hot links to avoid repeated DB lookups",
+      "Use a load balancer to spread API traffic"
+    ],
+    "required_node_types": ["api", "db", "cache"],
+    "reliability_features": ["lb", "queue"],
+    "target_throughput": 1800,
+    "target_latency_p95_ms": 60,
+    "budget_monthly_usd": 1300
+  },
+  {
+    "slug": "realtime-chat",
+    "title": "Realtime Chat",
+    "difficulty": "medium",
+    "requirements": [
+      "Deliver chat messages in near real-time",
+      "Maintain message history",
+      "Absorb burst traffic during peak usage"
+    ],
+    "hints": [
+      "Queues smooth spikes between producers and consumers",
+      "Cache can reduce repeated history reads"
+    ],
+    "required_node_types": ["api", "db", "queue"],
+    "reliability_features": ["lb", "cache"],
+    "target_throughput": 2300,
+    "target_latency_p95_ms": 90,
+    "budget_monthly_usd": 1800
+  },
+  {
+    "slug": "video-streaming",
+    "title": "Video Streaming",
+    "difficulty": "hard",
+    "requirements": [
+      "Serve video content with low startup delay",
+      "Support global traffic distribution",
+      "Store media reliably and process uploads asynchronously"
+    ],
+    "hints": [
+      "CDN is key for edge delivery",
+      "Object storage is usually the source of truth for media assets"
+    ],
+    "required_node_types": ["api", "object_store", "cdn", "queue"],
+    "reliability_features": ["lb", "cache"],
+    "target_throughput": 2600,
+    "target_latency_p95_ms": 120,
+    "budget_monthly_usd": 2500
+  }
+]

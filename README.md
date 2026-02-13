@@ -20,6 +20,31 @@ An interactive, browser-based platform to learn system design by **building arch
 ### View landing page prototype
 Open `web/index.html` in a browser.
 
+### Run local MVP
+
+Start backend:
+
+```bash
+cd backend
+python -m venv .venv
+# PowerShell
+.\.venv\Scripts\Activate.ps1
+# Bash
+source .venv/Scripts/activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload --port 8000
+```
+
+Start frontend (new terminal):
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open the frontend URL from Vite (usually `http://127.0.0.1:5173`).
+
 ### Publish to a new GitHub repo
 
 1. Install GitHub CLI:
